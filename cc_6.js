@@ -36,3 +36,20 @@ let bonus;
 }
 console.log("Bonus: $", calculateBonus(5000, "Excellent")); // Log the bonus, Bonus: $1000
 console.log("Bonus: $", calculateBonus(7000, "Good")); // Bonus: $7000
+
+// Task 4: Subscription Pricing Model
+    
+// Write a function that caclulates cost
+function calculateSubscriptionCost(plan, months, discount = 0) { // 
+    let monthlyCost;
+    if (plan === "Basic") {
+        monthlyCost = 10
+    } else if (plan === "Premium") {
+        monthlyCost = 20
+    } else if (plan === "Enterprise") {
+        monthlyCost === 50
+    }let totalCost = (monthlyCost * months) - discount;
+    return totalCost
+};
+console.log( `Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Log the total costs
+console.log( `Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);
